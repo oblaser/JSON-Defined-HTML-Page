@@ -1,0 +1,94 @@
+{
+    "content":
+    [
+        { "type": "title1", "text": "json-defined-html-page" },
+        { "type": "title2", "text": "Description" },
+        {
+            "type": "text",
+            "text": "An example of my \"JSON Defined HTML Page\" project.<br/>Further details:"
+        },
+        { "type": "link", "url": "https://github.com/oblaser/json-defined-html-page", "newTab": true },
+        { "type": "spacer", "value": 20 },
+
+        { "type": "title3", "text": "Title Size 3" },
+        {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        { "type": "spacer", "value": 7 },
+        { "type": "title3", "text": "Another Title Size 3" },
+        {
+            "type": "text",
+            "htmlStyle": "padding: 3px; border: solid 1px #1ac200; border-radius: 5px; color: #1ac200;",
+            "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        
+        { "type": "spacer", "value": 7 },
+        { "type": "title2", "text": "A styled title", "htmlStyle": "font-family: 'Courier New', monospace; color: #8400ff;" },
+        {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, elitr "
+        },
+        { "type": "link", "url": "https://github.com/", "text": "not inline link", "newTab": true },
+        {
+            "type": "text",
+            "text": " sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        
+        { "type": "spacer", "value": 15 },
+        {
+            "type": "text",
+            "text": "Lorem ipsum dolor sit amet, elitr <a href=\"https://github.com/\" target=\"_blank\">inline link</a> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+
+        { "type": "spacer", "value": 20 },
+        { "type": "title2", "text": "Downloads" },
+        { "type": "title3", "text": "Documents" },
+        {
+            "type": "list",
+            "items":
+            [
+                { "type": "link", "url": "./content/sampleDocument.pdf", "newTab": true, "comment": "An optional comment" },
+                { "type": "link", "url": "./content/sampleDocument.pdf", "newTab": true },
+                { "type": "link", "url": "./content/sampleDocument.pdf", "text": "Sample Document", "newTab": true }
+            ]
+        },
+        { "type": "title3", "text": "Release" },
+        {
+            "type": "list",
+            "items":
+            [
+                { "type": "link", "url": "./content/sampleDownload.zip", "download": true, "comment": "An optional comment", "liHtmlStyle": "padding-bottom: 5px;" },
+                { "type": "link", "url": "./content/sampleDownload.zip", "download": true, "liHtmlStyle": "padding-bottom: 5px;" },
+                { "type": "link", "url": "./content/sampleDownload.zip", "text": "Sample Download", "download": true }
+            ]
+        },
+
+        { "type": "spacer", "value": 30 },
+        { "type": "title2", "text": "List" },
+        {
+            "type": "list",
+            "htmlStyle": "background-color: green;",
+            "items":
+            [
+                { "type": "text", "text": "list item 1" },
+                { "type": "text", "text": "list item 2", "liHtmlStyle": "color: blue;" },
+                { "type": "text", "text": "list item 3", "htmlStyle": "color: blue;" },
+                { "type": "text", "text": "list item 4", "liHtmlStyle": "color: blue;", "htmlStyle": "color: firebrick;" },
+                { "type": "text", "text": "list item 5" }
+            ]
+        },
+
+        { "type": "spacer", "value": 30 },
+        { "type": "title2", "text": "images" },
+        { "type": "text", "text": "... are also possible:" },
+        {
+            "type": "html",
+            "text": "<img style=\"width: 300px;\" src=\"./img/dummyLogo.png\"/>"
+        }
+    ],
+    "footer":
+    [
+        { "type": "text", "text": "Footer text" }
+    ]
+}

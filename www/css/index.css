@@ -1,0 +1,133 @@
+/*
+
+Author:     Oliver Blaser
+
+Date c:     24.11.2020
+Date e:     24.11.2020
+
+License:    MIT - see bottom of file
+
+*/
+
+:root
+{
+    --color1: #e4e4e4;
+    --color2: #bebebe;
+    --color3: #6b6b6b;
+    --colorText: #000000;
+    --colorHighlight: #2273d6;
+
+    --fontFamily: Helvetica, sans-serif;
+
+    --errorFg: #ffd900;
+    --errorBg: #444444;
+}
+
+html,
+body
+{
+    background-color: var(--color2);
+    color: var(--colorText);
+    font-family: var(--fontFamily);
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body { margin: 8px; }
+
+h1
+{
+    font-size: 22px;
+    margin: 1px 0px;
+}
+
+h2
+{
+    font-size: 19px;
+    margin: 1px 0px;
+}
+
+h3
+{
+    font-size: 16px;
+    margin: 1px 0px;
+}
+
+a
+{
+    color: var(--colorHighlight);
+}
+
+#mainContainer
+{
+    /*max-width: 670px; /**/
+    margin: 0px;
+    padding: 0px;
+}
+
+#contentContainer
+{
+    margin: 0px;
+    padding: 5px 8px 6px 8px;
+    border-radius: 5px;
+    background-color: var(--color1);
+}
+
+.cdo_title1
+{
+}
+
+.cdo_title2
+{
+}
+
+.cdo_title3
+{
+}
+
+.cdo_text
+{
+}
+
+.cdo_link
+{
+}
+
+.cdo_spacer
+{
+}
+
+.cdo_list
+{
+    margin: 0px;
+    padding-left: 25px;
+}
+.cdo_listItem
+{
+}
+
+#footer
+{
+    padding: 3px 5px 0px 5px;
+    color: var(--color3);
+    font-size: 12px;
+}
+
+/*
+
+Copyright (c) 2020 Oliver Blaser
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+(the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/

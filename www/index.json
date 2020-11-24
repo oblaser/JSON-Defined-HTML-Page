@@ -89,6 +89,7 @@
     ],
     "footer":
     [
-        { "type": "text", "text": "Footer text" }
+        { "type": "text", "text": "footer text", "htmlStyle": "display: inline-block; padding-right: 3px;" },
+        { "type": "link", "url": "https://github.com/oblaser/json-defined-html-page", "text": "GitHub Repo", "newTab": true }
     ]
 }

@@ -10,7 +10,7 @@ Used to quickly create small and simple content pages. All the content is define
 
 # index.json Specification
 
-The main object contains two arrays named `content` and `footer`, each containing content defining objects. The footer array can only have `text`, `link` or `html` types.
+The main object contains two arrays named `content` and `footer`, each containing content defining objects.
 
 
 ## Content Defining Objects

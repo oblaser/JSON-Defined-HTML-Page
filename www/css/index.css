@@ -114,6 +114,9 @@ a
     font-size: 12px;
 }
 
+#footer a { color: var(--color3); }
+#footer a:hover { color: var(--colorHighlight); }
+
 /*
 
 Copyright (c) 2020 Oliver Blaser

@@ -6,6 +6,10 @@ Used to quickly create small and simple content pages. All the content is define
 
 [Here](https://oblaser.ch/__product/json-defined-html-page/) you can have a look on a live version of this index.json example.
 
+#### Common Source Code Modifications
+- index.html head section: title and favicon
+- index.css #mainContainer: max-width
+
 ---
 
 # index.json Specification

@@ -1,8 +1,19 @@
 {
+    "config":
+    {
+        "maxWidth": "680px"
+    },
+    
+    "defaultStyle":
+    [
+        { "type": "text", "css": "margin: 7px 0px;" }
+    ],
+
     "content":
     [
         { "type": "title1", "text": "JSON Defined HTML Page - Examples" },
-        { "type": "text", "text": "A description text of the download. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", "htmlStyle": "margin: 7px 0px;" },
+        { "type": "text", "text": "A description text of the download." },
+        { "type": "text", "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." },
 
 
 
@@ -34,7 +45,7 @@
     ],
     "footer":
     [
-        { "type": "link", "url": "https://oblaser.ch/", "newTab": true, "text": "Homepage", "htmlStyle": "padding-right: 3px;" },
+        { "type": "link", "url": "https://oblaser.ch/", "newTab": true, "text": "Homepage", "htmlStyle": "padding-right: 5px;" },
         { "type": "link", "url": "https://github.com/oblaser/", "newTab": true, "text": "GitHub" }
     ]
 }

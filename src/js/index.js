@@ -6,7 +6,7 @@ copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
 */
 
-const versionStr = '1.1.05';
+const versionStr = '1.0.0';
 
 function getHTMLerror(msg = 'error')
 {
@@ -15,19 +15,42 @@ function getHTMLerror(msg = 'error')
     return html;
 }
 
-function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
+function getPreDefStyle(type = 'type', preDefStyle = [ { type: 'type', css: '/**/' } ])
+{
+    let result = '/**/';
+
+    result = false;
+    for (let i = 0; i < preDefStyle.length; ++i)
+    {
+        if (type === preDefStyle[i].type)
+        {
+            result = preDefStyle[i].css;
+            break;
+        }
+    }
+
+    return result;
+}
+
+function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') }, preDefStyle = [ { type: 'type', css: '/**/' } ])
 {
     let html = '';
+    let styleStr = '';
 
     if((typeof(cdo) == 'object') && (typeof(cdo.type) == 'string'))
     {
-        switch(cdo.type)
+        let preDefStyleStr = getPreDefStyle(cdo.type, preDefStyle);
+
+        if (preDefStyleStr !== false) styleStr += preDefStyleStr;
+        if (typeof(cdo.htmlStyle) == 'string') styleStr += cdo.htmlStyle;
+
+        switch (cdo.type)
         {
             case 'title1':
                 if(typeof(cdo.text) == 'string')
                 {
                     html = '<h1 class="cdo_title1"';
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>' + cdo.text + '</h1>';
                 }
                 else html = getHTMLerror('<div style="font-weight: bold;">error ' + cdo.type + '</div>' + JSON.stringify(cdo));
@@ -37,7 +60,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 if(typeof(cdo.text) == 'string')
                 {
                     html = '<h2 class="cdo_title2"';
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>' + cdo.text + '</h2>';
                 }
                 else html = getHTMLerror('<div style="font-weight: bold;">error ' + cdo.type + '</div>' + JSON.stringify(cdo));
@@ -47,7 +70,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 if(typeof(cdo.text) == 'string')
                 {
                     html = '<h3 class="cdo_title3"';
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>' + cdo.text + '</h3>';
                 }
                 else html = getHTMLerror('<div style="font-weight: bold;">error ' + cdo.type + '</div>' + JSON.stringify(cdo));
@@ -58,13 +81,13 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 {
                     html = '<a class="cdo_link" href="' + cdo.url + '"';
 
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
-                    if(cdo.newTab) html += ' target="_blank"';
-                    if(cdo.download) html += ' download';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
+                    if (cdo.newTab) html += ' target="_blank"';
+                    if (cdo.download) html += ' download';
 
                     html += '>';
 
-                    if(typeof(cdo.text) == 'string') html += cdo.text;
+                    if (typeof(cdo.text) == 'string') html += cdo.text;
                     else
                     {
                         if(cdo.url.split('/').pop().includes('.')) html += cdo.url.split('/').pop();
@@ -80,7 +103,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 if(typeof(cdo.text) == 'string')
                 {
                     html = '<div class="cdo_text"';
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>' + cdo.text + '</div>';
                 }
                 else html = getHTMLerror('<div style="font-weight: bold;">error ' + cdo.type + '</div>' + JSON.stringify(cdo));
@@ -90,7 +113,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 if((typeof(cdo.value) == 'number') && (Number.isInteger(cdo.value)) && (cdo.value >= 0))
                 {
                     html = '<div class="cdo_spacer" style="height: ' + cdo.value.toString() + 'px;';
-                    if(typeof(cdo.htmlStyle) == 'string') html += cdo.htmlStyle;
+                    if (styleStr.length > 0) html += styleStr;
                     html += '"></div>';
                 }
                 else html = getHTMLerror('<div style="font-weight: bold;">error ' + cdo.type + '</div>' + JSON.stringify(cdo));
@@ -100,7 +123,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                 try
                 {
                     html = '<ul class="cdo_list"';
-                    if(typeof(cdo.htmlStyle) == 'string') html += ' style="' + cdo.htmlStyle + '"';
+                    if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>';
 
                     for(let i = 0; i < cdo.items.length; ++i)
@@ -109,7 +132,7 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
                         if(typeof(cdo.items[i].liHtmlStyle) == 'string') html += ' style="' + cdo.items[i].liHtmlStyle + '"';
                         html += '>';
 
-                        html += getHTML(cdo.items[i]);
+                        html += getHTML(cdo.items[i], undefined);
 
                         if(typeof(cdo.items[i].comment) == 'string') html += '<br/>' + cdo.items[i].comment;
 
@@ -148,9 +171,8 @@ $(function()
 
     $.get('./index.json', function(res)
     {
-        /*#p rmn 2 */
+        /*#p rmn 1 */
         console.log(res);
-        alert('debug version!');
 
         if(res.config)
         {
@@ -169,7 +191,7 @@ $(function()
 
             for(let i = 0; i < res.content.length; ++i)
             {
-                html += getHTML(res.content[i]);
+                html += getHTML(res.content[i], res.defaultStyle);
             }
 
             $('#contentContainer').html(html);
@@ -185,7 +207,7 @@ $(function()
     
             for(let i = 0; i < res.footer.length; ++i)
             {
-                html += getHTML(res.footer[i]);
+                html += getHTML(res.footer[i], undefined);
             }
 
             $('#footerContent').html(html);

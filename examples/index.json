@@ -1,4 +1,9 @@
 {
+    "config":
+    {
+        "maxWidth": "680px"
+    },
+
     "content":
     [
         { "type": "title1", "text": "JSON Defined HTML Page - Examples" },
@@ -16,7 +21,6 @@
         },
 
 
-
         { "type": "spacer", "value": 20 },
         { "type": "title2", "text": "Testing All Types" },
         {
@@ -28,6 +32,17 @@
             ]
         },
 
+
+        { "type": "spacer", "value": 20 },
+        { "type": "title2", "text": "Testing Config And Default Styles" },
+        {
+            "type": "list",
+            "items":
+            [
+                { "type": "link", "url": "./configAndDefaultStyles/" },
+                { "type": "link", "url": "./configAndDefaultStyles/index.json", "newTab": true }
+            ]
+        },
 
 
         { "type": "spacer", "value": 20 },
@@ -43,7 +58,7 @@
     ],
     "footer":
     [
-        { "type": "link", "url": "https://oblaser.ch/", "newTab": true, "text": "Homepage", "htmlStyle": "padding-right: 3px;" },
+        { "type": "link", "url": "https://oblaser.ch/", "newTab": true, "text": "Homepage", "htmlStyle": "padding-right: 5px;" },
         { "type": "link", "url": "https://github.com/oblaser/", "newTab": true, "text": "GitHub" }
     ]
 }

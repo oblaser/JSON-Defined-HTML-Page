@@ -80,6 +80,8 @@ List items are normal content defining objects, which can have additional option
 
 ## Configuration
 
+_object, optional_
+
 |Key|Value Type|Default Value|Description|
 |---|---|---|---|
 |`maxWidth`|string|_not set_|_optional_ Max width of `#mainContainer`|
@@ -91,3 +93,14 @@ List items are normal content defining objects, which can have additional option
 |`fontFamily`|string|`Helvetica, sans-serif`|_optional_|
 
 ## Default Styles
+
+_array, optional_
+
+The array contains the following objects:
+
+|Key|Value Type|Description|
+|---|---|---|
+|`type`|string|One of the content defining objects `type`|
+|`css`|string|The css style string|
+
+Does neither affect childs of a list item nor the footer.

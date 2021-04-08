@@ -1,10 +1,12 @@
 /*
 
 author         Oliver Blaser
-date           24.11.2020
+date           08.04.2021
 copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
 */
+
+const versionStr = '1.1.05';
 
 function getHTMLerror(msg = 'error')
 {
@@ -142,9 +144,24 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') })
 
 $(function()
 {
+    $('#versionString').html(versionStr);
+
     $.get('./index.json', function(res)
     {
-        //console.log(res);
+        /*#p rmn 2 */
+        console.log(res);
+        alert('debug version!');
+
+        if(res.config)
+        {
+            if(res.config.maxWidth) $('#mainContainer').css('max-width', res.config.maxWidth);
+            if(res.config.color1) document.documentElement.style.setProperty('--color1', res.config.color1);
+            if(res.config.color2) document.documentElement.style.setProperty('--color2', res.config.color2);
+            if(res.config.color3) document.documentElement.style.setProperty('--color3', res.config.color3);
+            if(res.config.colorText) document.documentElement.style.setProperty('--colorText', res.config.colorText);
+            if(res.config.colorHighlight) document.documentElement.style.setProperty('--colorHighlight', res.config.colorHighlight);
+            if(res.config.fontFamily) document.documentElement.style.setProperty('--fontFamily', res.config.fontFamily);
+        }
 
         try
         {
@@ -171,11 +188,11 @@ $(function()
                 html += getHTML(res.footer[i]);
             }
 
-            $('#footer').html(html);
+            $('#footerContent').html(html);
         }
         catch (err)
         {
-            $('#footer').html(getHTMLerror(err));
+            $('#footerContent').html(getHTMLerror(err));
         }
     });
 });

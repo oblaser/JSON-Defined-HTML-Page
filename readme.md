@@ -4,19 +4,22 @@ Used to quickly create small and simple content pages. All the content is define
 
 > In my case I mainly use them as download pages, separated from the actual website.
 
+Errors and warnings will be printed to the JS console.
+
 ## Examples
 - JSON files: [./examples/](./examples/)
 - Live: <https://static.oblaser.ch/json-defined-html-page/>
 
 ## Common Source Code Modifications
 - index.html head section: title and favicon
-- index.css #mainContainer: max-width
 
 ---
 
 # index.json Specification
 
 The main object contains two arrays named `content` and `footer`, each containing content defining objects.
+
+Optionally the `config` and/or the `defaultStyle` objects can be added.
 
 
 ## Content Defining Objects
@@ -73,3 +76,18 @@ List items are normal content defining objects, which can have additional option
 |Key|Value Type|Description|
 |---|---|---|
 |`text`|string|The whole html element|
+
+
+## Configuration
+
+|Key|Value Type|Default Value|Description|
+|---|---|---|---|
+|`maxWidth`|string|_not set_|_optional_ Max width of `#mainContainer`|
+|`color1`|string|`#d3d3d3`|_optional_ Color scheme|
+|`color2`|string|`#b3b3b3`|_optional_ Color scheme|
+|`color3`|string|`#424242`|_optional_ Color scheme|
+|`colorText`|string|`#424242`|_optional_ Color scheme|
+|`colorHighlight`|string|`#4b84ff`|_optional_ Color scheme|
+|`fontFamily`|string|`Helvetica, sans-serif`|_optional_|
+
+## Default Styles

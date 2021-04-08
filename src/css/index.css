@@ -1,7 +1,7 @@
 /*
 
 author         Oliver Blaser
-date           24.11.2020
+date           08.04.2021
 copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
 */
@@ -58,7 +58,6 @@ a
 
 #mainContainer
 {
-    /*max-width: 670px; /**/
     margin: 0px;
     padding: 0px;
 }
@@ -109,6 +108,11 @@ a
     padding: 3px 5px 0px 5px;
     color: var(--color3);
     font-size: 12px;
+}
+
+#footerContent
+{
+    display: inline-block;
 }
 
 #footer a { color: var(--color3); }

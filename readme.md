@@ -91,6 +91,7 @@ _object, optional_
 |`colorText`|string|`#424242`|_optional_ Color scheme|
 |`colorHighlight`|string|`#4b84ff`|_optional_ Color scheme|
 |`fontFamily`|string|`Helvetica, sans-serif`|_optional_|
+|`center`|bool|_not set_|_optional_ Only relevant, if `maxWidth` is smaller than the window width|
 
 ## Default Styles
 

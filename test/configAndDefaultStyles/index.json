@@ -1,15 +1,17 @@
 {
     "config":
     {
-        "maxWidth": "680px",
+        "maxWidth": "850px",
 
         "color1": "HoneyDew",
         "color2": "#008000",
-        "color3": "LightBlue",
+        "color3": "Orange",
         "colorText": "#4B0082",
         "colorHighlight": "FireBrick",
 
-        "fontFamily": "Courier New"
+        "fontFamily": "Courier New",
+
+        "center": true
     },
 
     "defaultStyle":

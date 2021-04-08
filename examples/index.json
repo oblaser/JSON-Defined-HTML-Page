@@ -1,7 +1,8 @@
 {
     "config":
     {
-        "maxWidth": "680px"
+        "maxWidth": "680px",
+        "center": true
     },
 
     "content":

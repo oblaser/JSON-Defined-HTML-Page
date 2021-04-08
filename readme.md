@@ -2,12 +2,8 @@
 
 Used to quickly create small and simple content pages. All the content is defined by the `index.json` file.
 
-> In my case I mainly use them as download pages, separated from the actual website.
-
-Errors and warnings will be printed to the JS console.
-
 ## Examples
-- JSON files: [./examples/](./examples/)
+- JSON files: [./examples/](./examples/) and [./test/](./test/)
 - Live: <https://static.oblaser.ch/json-defined-html-page/>
 
 ## Common Source Code Modifications

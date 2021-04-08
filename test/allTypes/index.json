@@ -84,7 +84,7 @@
         { "type": "text", "text": "... are also possible:" },
         {
             "type": "html",
-            "text": "<img style=\"width: 300px;\" src=\"./img/dummyLogo.png\"/>"
+            "text": "<img style=\"width: 300px;\" src=\"./dummyLogo.png\"/>"
         }
     ],
     "footer":

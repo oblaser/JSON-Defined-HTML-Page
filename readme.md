@@ -4,9 +4,11 @@ Used to quickly create small and simple content pages. All the content is define
 
 > In my case I mainly use them as download pages, separated from the actual website.
 
-[Here](https://oblaser.ch/__product/json-defined-html-page/) you can have a look on a live version of this index.json example.
+## Examples
+- JSON files: [./examples/](./examples/)
+- Live: <https://static.oblaser.ch/json-defined-html-page/>
 
-#### Common Source Code Modifications
+## Common Source Code Modifications
 - index.html head section: title and favicon
 - index.css #mainContainer: max-width
 
@@ -18,7 +20,7 @@ The main object contains two arrays named `content` and `footer`, each containin
 
 
 ## Content Defining Objects
-Each object must provide the `type` key.
+Each object must provide the `type` key. Types are:
 
 
 ### titleX

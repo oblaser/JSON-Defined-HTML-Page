@@ -1,0 +1,40 @@
+{
+    "content":
+    [
+        { "type": "title1", "text": "JSON Defined HTML Page - Examples" },
+        { "type": "text", "text": "A description text of the download. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.", "htmlStyle": "margin: 7px 0px;" },
+
+
+
+        { "type": "spacer", "value": 20 },
+        { "type": "title2", "text": "Releases" },
+        {
+            "type": "list",
+            "items":
+            [
+                { "type": "link", "url": "./content/sampleDownload.zip", "download": true, "comment": "An optional comment", "liHtmlStyle": "padding-bottom: 7px;" },
+                { "type": "link", "url": "./content/sampleDownload.zip", "download": true, "liHtmlStyle": "padding-bottom: 7px;" },
+                { "type": "link", "url": "./content/sampleDownload.zip", "text": "Sample Download", "download": true }
+            ]
+        },
+
+
+
+        { "type": "spacer", "value": 20 },
+        { "type": "title2", "text": "Documents" },
+        {
+            "type": "list",
+            "items":
+            [
+                { "type": "link", "url": "./content/sampleDocument.pdf", "newTab": true },
+                { "type": "link", "url": "./content/sampleDocument.pdf", "text": "Document 1", "newTab": true },
+                { "type": "link", "url": "./content/sampleDocument.pdf", "text": "Document 2", "newTab": true }
+            ]
+        }
+    ],
+    "footer":
+    [
+        { "type": "link", "url": "https://oblaser.ch/", "newTab": true, "text": "Homepage", "htmlStyle": "padding-right: 3px;" },
+        { "type": "link", "url": "https://github.com/oblaser/", "newTab": true, "text": "GitHub" }
+    ]
+}

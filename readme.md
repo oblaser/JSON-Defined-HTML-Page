@@ -4,7 +4,7 @@ Used to quickly create small and simple content pages. All the content is define
 
 ## Examples
 - JSON files: [./examples/](./examples/) and [./test/](./test/)
-- Live: <https://static.oblaser.ch/json-defined-html-page/>
+- Live: <https://static.oblaser.ch/json-defined-html-page/examples>
 
 ## Common Source Code Modifications
 - index.html head section: title and favicon

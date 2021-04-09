@@ -9,10 +9,10 @@
     [
         { "type": "title1", "text": "JSON Defined HTML Page - Examples" },
         { "type": "text", "text": "Here are some examples of the project.", "htmlStyle": "margin: 7px 0px;" },
-        
-        { "type": "text", "text": "This pages&nbsp;", "htmlStyle": "display: inline-block; margin: 7px 0px;" },
-        { "type": "link", "url": "./index.json", "newTab": true, "text": "index.json" },
-        
+
+        { "type": "link", "url": "../", "text": "Back" },
+        { "type": "text", "text": "&nbsp;to the project page.", "htmlStyle": "display: inline-block; margin: 7px 0px;" },
+
         {
             "type": "link",
             "url": "https://github.com/oblaser/json-defined-html-page",
@@ -20,6 +20,9 @@
             "text": "GitHub Repo",
             "htmlStyle": "display: block; margin: 7px 0px;"
         },
+
+        { "type": "text", "text": "This pages&nbsp;", "htmlStyle": "display: inline-block; margin: 7px 0px;" },
+        { "type": "link", "url": "./index.json", "newTab": true, "text": "index.json" },
 
 
         { "type": "spacer", "value": 20 },

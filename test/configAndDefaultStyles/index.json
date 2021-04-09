@@ -17,7 +17,8 @@
     "defaultStyle":
     [
         { "type": "text", "css": "margin: 10px 0px;" },
-        { "type": "list", "css": "border: 2px orangered double; border-radius: 7px;" }
+        { "type": "list", "css": "border: 2px orangered solid; border-radius: 7px;" },
+        { "type": "listItem", "css": "background-color:#8fffda;" }
     ],
 
     "content":
@@ -37,7 +38,8 @@
             "items":
             [
                 { "type": "link", "url": "#", "text": "a link" },
-                { "type": "text", "text": "Just some text" }
+                { "type": "text", "text": "Just some text", "liHtmlStyle": "color:magenta;" },
+                { "type": "text", "text": "Another text li" }
             ]
         }
     ],

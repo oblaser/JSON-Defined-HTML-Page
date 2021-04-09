@@ -69,7 +69,7 @@ a
     border-radius: 5px;
     background-color: var(--color1);
 }
-
+/*#p rm */
 .cdo_title1
 {
 }
@@ -93,15 +93,18 @@ a
 .cdo_spacer
 {
 }
+/*#p endrm */
 
 .cdo_list
 {
     margin: 0px 0px 7px 0px;
     padding-left: 25px;
 }
+/*#p rm */
 .cdo_listItem
 {
 }
+/*#p endrm */
 
 #footer
 {

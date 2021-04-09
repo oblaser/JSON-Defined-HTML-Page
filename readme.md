@@ -100,4 +100,6 @@ The array contains the following objects:
 |`type`|string|One of the content defining objects `type`|
 |`css`|string|The css style string|
 
+An additional type is `listItem`, which affects each object in the `list.items` array.
+
 Does neither affect childs of a list item nor the footer.

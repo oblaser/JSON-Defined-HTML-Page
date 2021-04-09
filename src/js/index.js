@@ -1,7 +1,7 @@
 /*
 
 author         Oliver Blaser
-date           08.04.2021
+date           09.04.2021
 copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
 */
@@ -126,10 +126,17 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') }, p
                     if (styleStr.length > 0) html += ' style="' + styleStr + '"';
                     html += '>';
 
+                    let liPreDefStyleStr = getPreDefStyle('listItem', preDefStyle);
+
                     for(let i = 0; i < cdo.items.length; ++i)
                     {
                         html += '<li class="cdo_listItem"';
-                        if(typeof(cdo.items[i].liHtmlStyle) == 'string') html += ' style="' + cdo.items[i].liHtmlStyle + '"';
+
+                        let liStyleStr = '';
+                        if (liPreDefStyleStr !== false) liStyleStr += liPreDefStyleStr;
+                        if (typeof(cdo.items[i].liHtmlStyle) == 'string') liStyleStr += cdo.items[i].liHtmlStyle;
+                        if (liStyleStr.length > 0) html += ' style="' + liStyleStr + '"';
+                        
                         html += '>';
 
                         html += getHTML(cdo.items[i], undefined);

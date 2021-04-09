@@ -28,8 +28,8 @@
             "type": "list",
             "items":
             [
-                { "type": "link", "url": "./test/" },
-                { "type": "link", "url": "./test/index.json", "newTab": true, "text": "index.json" }
+                { "type": "link", "url": "./allTypes/" },
+                { "type": "link", "url": "./allTypes/index.json", "newTab": true, "text": "index.json" }
             ]
         },
 

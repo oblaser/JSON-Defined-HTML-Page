@@ -3,7 +3,7 @@
 # 08.04.2021
 #
 # This is a potoroo job file. See https://github.com/oblaser/potoroo for details.
-# (potoroo is still in alfa, use at minimum commit 26a624647f2f5712f44380cf0102a4daa334dbf3)
+# (potoroo is still in alfa, use at minimum commit 402311d6c9206fb427c5c1957c52c5fe07ee9d7d)
 #
 
 -if ./src/index.html        -od ./deploy    -t custom:/*#p      -Wsup 107

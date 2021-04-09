@@ -6,7 +6,7 @@ copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
 */
 
-const versionStr = '1.0.1';
+const versionStr = '1.0.2';
 
 function getHTMLerror(msg = 'error')
 {

@@ -4,7 +4,7 @@ date            08.01.2022
 copyright       MIT - Copyright (c) 2022 Oliver Blaser
 */
 
-const versionStr = '1.1.0-alpha';
+const versionStr = '1.1.0';
 
 function getHTMLerror(msg = 'error')
 {

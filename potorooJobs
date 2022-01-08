@@ -1,9 +1,11 @@
 #
-# Oliver Blaser
-# 08.04.2021
+# author        Oliver Blaser
+# date          08.01.2022
+# copyright     MIT - Copyright (c) 2022 Oliver Blaser
 #
+
 # This is a potoroo job file. See https://github.com/oblaser/potoroo for details.
-# (potoroo is still in alfa, use at minimum commit 402311d6c9206fb427c5c1957c52c5fe07ee9d7d or v0.2.0)
-#
+# (potoroo is still in alfa, use at minimum the 0.2.0-pre-release https://github.com/oblaser/potoroo/releases/tag/0.2.0-pre-release)
+
 
 -if ./src/index.html        -od ./deploy    -t custom:/*#p      -Wsup 107

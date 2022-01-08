@@ -1,10 +1,9 @@
 /*
-
-author         Oliver Blaser
-date           08.04.2021
-copyright      MIT - Copyright (c) 2020 Oliver Blaser
-
+author          Oliver Blaser
+date            08.01.2022
+copyright       MIT - Copyright (c) 2022 Oliver Blaser
 */
+
 
 :root
 {
@@ -19,6 +18,7 @@ copyright      MIT - Copyright (c) 2020 Oliver Blaser
     --errorFg: #ffd900;
     --errorBg: #424242;
 }
+
 
 html,
 body

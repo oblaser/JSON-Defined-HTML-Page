@@ -1,9 +1,11 @@
 <!--
+author          Oliver Blaser
+date            08.01.2022
+copyright       MIT - Copyright (c) 2022 Oliver Blaser
+-->
 
-author         Oliver Blaser
-date           09.11.2021
-copyright      MIT - Copyright (c) 2020 Oliver Blaser
-
+<!--
+    /*#p include '../license.txt' */
 -->
 
 <!DOCTYPE html>
@@ -15,23 +17,23 @@ copyright      MIT - Copyright (c) 2020 Oliver Blaser
 
     <!-- <title>Page Title</title> -->
 
-    <!-- <link rel="icon" href="./img/favicon.ico"> -->
+    <!-- <link rel="icon" href="./favicon.ico"> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 
     <!--
-    /*#p rmn 3 -->
-    <link type="text/css" rel="stylesheet" href="./css/index.css">
-    <script type="text/javascript" src="./js/jQuery.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script> <!--
+    /*#p rmn 2 -->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./jdhp.js"></script> <!--
     -->
 
     <style>
-        /*#p include "./css/index.css" */
+        /*#p include "./style.css" */
     </style>
 
     <script>
-        /*#p include './js/jQuery.js' */
-
-        /*#p include "./js/index.js" */
+        /*#p include "./jdhp.js" */
     </script>
 
 </head>
@@ -49,19 +51,15 @@ copyright      MIT - Copyright (c) 2020 Oliver Blaser
     <div id="mainContainer">
         <div id="contentContainer">
             <h1>Loading...</h1>
-            <div style="margin: 7px 0px;">Maybe the <a href="./index.json" target="_blank">index.json</a> file is corrupted.</div>
+            <div style="margin: 7px 0px;">Maybe the <a href="./index.js" target="_blank">index.js</a> or <a href="./index.json" target="_blank">index.json</a> file is corrupted.</div>
             <div>Visit the <a href="https://github.com/oblaser/json-defined-html-page" target="_blank">project page</a> to get more information.</div>
         </div>
         <div id="footer">
             <div id="footerContent">Default Footer Text</div>
-            <span style="float:right; opacity:0.4;"><a style="text-decoration: none;" href="https://github.com/oblaser/json-defined-html-page" target="_blank">jdhp</a> v<div id="versionString" style="display: inline-block;"></div></span>
+            <span style="float:right; opacity:0.45;"><a style="text-decoration: none;" href="https://github.com/oblaser/json-defined-html-page" target="_blank">jdhp</a> v<div id="versionString" style="display: inline-block;"></div></span>
         </div>
     </div>
 
 </body>
 
 </html>
-
-<!--
-    /*#p include '../license.txt' */
--->

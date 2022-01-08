@@ -170,59 +170,70 @@ function getHTML(cdo = { type: 'html', text: getHTMLerror('no cdo defined') }, p
     return html;
 }
 
+function processPageData(pd)
+{
+    if(pd.config)
+    {
+        if(pd.config.maxWidth) $('#mainContainer').css('max-width', pd.config.maxWidth);
+
+        if(pd.config.color1) document.documentElement.style.setProperty('--color1', pd.config.color1);
+        if(pd.config.color2) document.documentElement.style.setProperty('--color2', pd.config.color2);
+        if(pd.config.color3) document.documentElement.style.setProperty('--color3', pd.config.color3);
+        if(pd.config.colorText) document.documentElement.style.setProperty('--colorText', pd.config.colorText);
+        if(pd.config.colorHighlight) document.documentElement.style.setProperty('--colorHighlight', pd.config.colorHighlight);
+        if(pd.config.fontFamily) document.documentElement.style.setProperty('--fontFamily', pd.config.fontFamily);
+
+        if(pd.config.center === true) $('#mainContainer').css({"margin-left":"auto","margin-right":"auto"});
+    }
+
+    try
+    {
+        let html = '';
+
+        for(let i = 0; i < pd.content.length; ++i)
+        {
+            html += getHTML(pd.content[i], pd.defaultStyle);
+        }
+
+        $('#contentContainer').html(html);
+    }
+    catch (err)
+    {
+        $('#contentContainer').html(getHTMLerror(err));
+    }
+
+    try
+    {
+        let html = '';
+
+        for(let i = 0; i < pd.footer.length; ++i)
+        {
+            html += getHTML(pd.footer[i], undefined);
+        }
+
+        $('#footerContent').html(html);
+    }
+    catch (err)
+    {
+        $('#footerContent').html(getHTMLerror(err));
+    }
+}
+
 $(function()
 {
     $('#versionString').html(versionStr);
 
-    $.get('./index.json', function(res)
+    if(typeof pageData !== 'undefined')
     {
-        /*#p rmn 1 */
-        console.log(res);
-
-        if(res.config)
+        processPageData(pageData);
+    }
+    else
+    {
+        $.get('./index.json', function(res)
         {
-            if(res.config.maxWidth) $('#mainContainer').css('max-width', res.config.maxWidth);
-
-            if(res.config.color1) document.documentElement.style.setProperty('--color1', res.config.color1);
-            if(res.config.color2) document.documentElement.style.setProperty('--color2', res.config.color2);
-            if(res.config.color3) document.documentElement.style.setProperty('--color3', res.config.color3);
-            if(res.config.colorText) document.documentElement.style.setProperty('--colorText', res.config.colorText);
-            if(res.config.colorHighlight) document.documentElement.style.setProperty('--colorHighlight', res.config.colorHighlight);
-            if(res.config.fontFamily) document.documentElement.style.setProperty('--fontFamily', res.config.fontFamily);
-
-            if(res.config.center === true) $('#mainContainer').css({"margin-left":"auto","margin-right":"auto"});
-        }
-
-        try
-        {
-            let html = '';
-
-            for(let i = 0; i < res.content.length; ++i)
-            {
-                html += getHTML(res.content[i], res.defaultStyle);
-            }
-
-            $('#contentContainer').html(html);
-        }
-        catch (err)
-        {
-            $('#contentContainer').html(getHTMLerror(err));
-        }
-
-        try
-        {
-            let html = '';
-    
-            for(let i = 0; i < res.footer.length; ++i)
-            {
-                html += getHTML(res.footer[i], undefined);
-            }
-
-            $('#footerContent').html(html);
-        }
-        catch (err)
-        {
-            $('#footerContent').html(getHTMLerror(err));
-        }
-    });
+            /*#p rmn 1 */
+            console.log(res);
+            processPageData(res);
+        });
+    }
 });

@@ -8,4 +8,4 @@
 # (potoroo is still in alfa, use at minimum the 0.2.0-pre-release https://github.com/oblaser/potoroo/releases/tag/0.2.0-pre-release)
 
 
--if ./src/index.html        -od ./deploy    -t custom:/*#p      -Wsup 107
+-if ./src/index.html        -od ./release    -t custom:/*#p      -Wsup 107

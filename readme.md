@@ -1,6 +1,8 @@
 # JSON Defined HTML Page
 
-Used to quickly create small and simple content pages. All the content is defined by the `index.json` file.
+Used to quickly create small and simple content pages. All the content is defined in the `index.json` file.
+Since version 1.1.0 it's possible to define the content in `index.js`, so the page content data is loaded together with the html and not only after the page has been loaded.
+For backwards compatibility the JSON file is loaded if the page data object is not defined or the JS file is not found.
 
 ## Examples
 - JSON files: [./examples/](./examples/) and [./test/](./test/)
@@ -13,7 +15,15 @@ Used to quickly create small and simple content pages. All the content is define
 
 # index.js Specification
 
+A const object has to be defined. The structure of it is the same as for the JSON file.
 
+```
+const pageData =
+{
+    content: [ /* ... */ ],
+    footer: [ /* ... */ ]
+};
+```
 
 # index.json Specification
 

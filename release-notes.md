@@ -5,7 +5,8 @@
 ### v1.1.0
 
 New
- - index.js
+ - index.js for page data
+ - loading jQuery from _code.jquery.com_
 
 
 

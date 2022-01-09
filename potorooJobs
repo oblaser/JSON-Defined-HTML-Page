@@ -1,6 +1,6 @@
 #
 # author        Oliver Blaser
-# date          08.01.2022
+# date          09.01.2022
 # copyright     MIT - Copyright (c) 2022 Oliver Blaser
 #
 
@@ -8,4 +8,31 @@
 # (potoroo is still in alfa, use at minimum the 0.2.0-pre-release https://github.com/oblaser/potoroo/releases/tag/0.2.0-pre-release)
 
 
--if ./src/index.html        -od ./release    -t custom:/*#p      -Wsup 107
+-if ./src/index.html        -of ./release/jdhp_X.X.X.html    -t custom:/*#p      -Wsup 107
+
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/index.html                         --copy
+-if ./web/index.js                                                  -od ./web-deploy
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/downloads/index.html               --copy
+-if ./web/downloads/index.js                                        -od ./web-deploy/downloads
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/examples/index.html                --copy
+-if ./web/examples/index.js                                         -od ./web-deploy/examples
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/examples/allTypes/index.html       --copy
+-if ./web/examples/allTypes/dummyLogo.png                           -od ./web-deploy/examples/allTypes                  --copy
+-if ./web/examples/allTypes/index.json                              -od ./web-deploy/examples/allTypes                  --copy
+-if ./web/examples/downloads/content/sampleDocument.pdf             -od ./web-deploy/examples/allTypes/content          --copy
+-if ./web/examples/downloads/content/sampleDownload.zip             -od ./web-deploy/examples/allTypes/content          --copy
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/examples/configAndDefaultStyles/index.html --copy
+-if ./web/examples/configAndDefaultStyles/index.json                -od ./web-deploy/examples/configAndDefaultStyles    --copy
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/examples/devTest/index.html        --copy
+-if ./web/examples/devTest/index.json                               -od ./web-deploy/examples/devTest                   --copy
+
+-if ./release/jdhp_1.1.0.html                                       -of ./web-deploy/examples/downloads/index.html      --copy
+-if ./web/examples/downloads/index.json                             -od ./web-deploy/examples/downloads                 --copy
+-if ./web/examples/downloads/content/sampleDocument.pdf             -od ./web-deploy/examples/downloads/content         --copy
+-if ./web/examples/downloads/content/sampleDownload.zip             -od ./web-deploy/examples/downloads/content         --copy

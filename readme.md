@@ -5,7 +5,7 @@ Since version 1.1.0 it's possible to define the content in `index.js`, so the pa
 For backwards compatibility the JSON file is loaded if the page data object is not defined or the JS file is not found.
 
 ## Examples
-- JSON files: [./examples/](./examples/) and [./test/](./test/)
+- [./web/examples](./web/examples)
 - Live: <https://static.oblaser.ch/json-defined-html-page/examples>
 
 ## Common Source Code Modifications

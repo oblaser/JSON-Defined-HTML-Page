@@ -1,10 +1,11 @@
+/*#p rmn 6 */
 /*
 author          Oliver Blaser
-date            08.01.2022
+date            09.01.2022
 copyright       MIT - Copyright (c) 2022 Oliver Blaser
 */
 
-const versionStr = '1.1.0';
+const versionStr = '1.1.1-alpha';
 
 function getHTMLerror(msg = 'error')
 {
